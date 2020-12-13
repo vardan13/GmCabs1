@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-navbar color="primary">
+
+    <ion-title>
+      GPS Tracking
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+   <button ion-button full icon-left (click)="StartTracking()" *ngIf="!istracking">
+     <ion-icon name="locate"></ion-icon>
+     Start Tracking
+   </button>
+   <button ion-button full icon-left (click)="StopTracking()" *ngIf="istracking">
+    <ion-icon name="hand"></ion-icon>
+    Stop Tracking
+  </button>
+  
+</ion-content>

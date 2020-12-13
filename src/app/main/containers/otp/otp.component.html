@@ -1,0 +1,47 @@
+<ion-content class="ion-padding">
+  <form id="login" class="form" action="" method="post" novalidate [formGroup]="registrationForm" >
+  <div padding>
+  <ion-row>
+    <ion-col class="ion-text-center">
+      <img class="logo" src="../../../../assets/GM-Cab_Final-Logo.png" height="100px" width="100px" />
+    </ion-col>
+  </ion-row>
+  <ion-row style="margin-top: 20px;">
+    <ion-col class="ion-text-center">
+      <h3><b>जीएम कॅब</b></h3>
+</ion-col>
+</ion-row>
+<ion-card style="margin-top: 150px;">
+  <ion-item >
+
+    <ion-input type="password" formControlName="Otp"  placeholder="ओटीपी प्रविष्ट करा" ></ion-input>
+
+  </ion-item>
+</ion-card>
+<div style="margin-left: 20px;" *ngFor="let error of errorMessages.Otp">
+          <ng-container *ngIf="Otp.hasError(error.type) && (Otp.dirty || Otp.touched)">
+            <small class="error-message">{{error.message}}</small>
+          </ng-container>
+</div>
+<ion-grid>
+  <ion-row>
+
+    <!-- <ion-col col-3>
+
+      <ion-button color="primary" expand="block" [routerLink]="[ '/main/info' ]">
+        Sign In
+      </ion-button>
+    </ion-col> -->
+    <ion-col col-8>
+
+      <ion-button type="submit" color="danger" (click)="submit()" expand="block" >
+       Sign In
+       <ion-icon slot="end" name="create"></ion-icon>
+      </ion-button>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+</div>
+
+</form>
+</ion-content>

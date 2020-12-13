@@ -1,0 +1,174 @@
+<ion-app>
+    <ion-menu side="start" menuId="first" contentId="content1" >
+        <!-- <ion-header>
+          <ion-toolbar  >
+            <ion-title>Navigate</ion-title>
+          </ion-toolbar>
+        </ion-header> -->
+        <ion-content fullscreen style="--color: black; --background: white" >
+          <ion-list *ngFor="let pages of navigate">
+          <ion-menu-toggle auto-hide="true">
+            <ion-item [routerLink]="pages.url" routerDirection="forward">
+                <ion-icon [name]="pages.icon" slot="start"></ion-icon>
+                   {{pages.title}} 
+            </ion-item>
+          </ion-menu-toggle>
+          </ion-list>
+          <div class="menu-header-bg">
+              <div class="header-content">
+                  <img style="margin-top: 27px;" src="../assets/new-delhi-domestic-car-driver-services-500x500.png ">
+                  <!-- <ion-label>
+                      <h2>John Smith</h2>
+                  </ion-label> -->
+              </div>
+          </div>
+          <ion-row style="margin-top: 20px;margin-left: 20px;"> 
+            <!-- <ion-col >
+              <ion-avatar item-start>
+                <img src="../assets/avatar-ts-woody.png" style="zoom:2.0">
+              </ion-avatar>
+            </ion-col> -->
+             <!-- <ion-col style="font-size: 20px;margin-left: -100px;margin-top: 10px;">
+               John Smith
+             </ion-col> -->
+             <ion-col style="font-size:20px;margin-left: 100px;" >
+                John Smith
+             </ion-col>
+          </ion-row>
+        
+          <!-- <ion-avatar item-start style="margin-left: 230px;margin-top: -30px;">
+            <img src="../assets/avatar-ts-woody.png" style="height: 25px;width:25px">
+          </ion-avatar> -->
+          <ion-item lines="full">
+          <ion-row  style="height: 39px;">
+            <ion-col style="margin-left: 18px;">
+                <ion-icon name="home" style="zoom: 2" ></ion-icon>
+            </ion-col>
+            <ion-col style="margin-top: 5px;margin-left: 6px;" >
+                <ion-label style="font-size: 15px">
+                    Dashboard
+                </ion-label>
+            </ion-col>
+            
+          </ion-row>
+        </ion-item>
+
+        <ion-item lines="full">
+          <ion-row style="height: 39px;">
+              <ion-col style="margin-left: 18px">
+                <ion-icon name="mail-outline" style="zoom:2"></ion-icon>
+            </ion-col>
+              <ion-col style="margin-top: 5px;margin-left: 6px">
+                  <ion-label style="font-size: 15px">
+                      My Enquiry
+                  </ion-label>
+              </ion-col>
+          
+          </ion-row>
+        </ion-item>
+        <ion-item lines="full">
+          <ion-row style="height: 39px;">
+              <ion-col style="margin-left: 18px;">
+                    <ion-icon name="car" style="zoom: 2" ></ion-icon>
+            </ion-col>
+              <ion-col style="margin-top: 5px;margin-left: 6px">
+                  <ion-label style="font-size: 15px">
+                      My Vehicles
+                  </ion-label>
+              </ion-col>
+            
+          </ion-row>
+        </ion-item>
+        <!-- <ion-item lines="full">
+          <ion-row style="height: 39px;">
+              <ion-col style="margin-left: 18px;">
+                  <ion-icon name="person" style="zoom: 2" ></ion-icon>
+              </ion-col>
+              <ion-col style="margin-top: 5px;margin-left: 6px">
+                  <ion-label style="font-size: 15px">
+                      User
+                  </ion-label>
+              </ion-col>
+            
+          </ion-row>
+        </ion-item> -->
+        <ion-item lines="full">
+          <ion-row style="height: 39px;">
+              <ion-col style="margin-left: 18px;">
+                  <ion-icon name="cash" style="zoom: 2"></ion-icon>
+              </ion-col>
+              <ion-col style="margin-top: 5px;margin-left: 6px;">
+                  <ion-label style="font-size: 15px">
+                      Fixed Fares
+                  </ion-label>
+              </ion-col>
+           
+          </ion-row >
+        </ion-item>
+        <ion-item lines="full">
+          <ion-row style="height: 39px;">
+              <ion-col style="margin-left: 18px;">
+                  <ion-icon name="archive-outline" style="zoom: 2"></ion-icon>
+              </ion-col>
+              <ion-col style="margin-top: 5px;margin-left: 6px">
+                  <ion-label style="font-size: 15px">
+                      Messages
+                  </ion-label>
+              </ion-col>
+           
+          </ion-row>
+        </ion-item>
+        <!-- <ion-item lines="full">
+          <ion-row style="height: 39px;">
+              <ion-col style="margin-left: 18px;">
+                  <ion-icon name="card" style="zoom: 2" ></ion-icon>
+              </ion-col>
+              <ion-col style="margin-top: 5px;margin-left: 6px;">
+                  <ion-label style="font-size: 15px">
+                      Settings
+                  </ion-label>
+              </ion-col>
+           
+          </ion-row>
+        </ion-item> -->
+        <ion-item lines="full">
+          <ion-row style="height: 39px;">
+              <ion-col style="margin-left: 18px;">
+                  <ion-icon name="notifications" style="zoom: 2" ></ion-icon>
+              </ion-col>
+              <ion-col style="margin-top: 5px;margin-left: 6px;;">
+                  <ion-label style="font-size: 15px">
+                      Notifications
+                  </ion-label>
+              </ion-col>
+           
+          </ion-row>
+        </ion-item>
+          <!-- <ion-row style="height: 39px;">
+              <ion-col style="margin-left: 30px;">
+                  <ion-icon name="list" style="zoom: 2" ></ion-icon>
+              </ion-col>
+              <ion-col style="margin-left: -170px;margin-top: 4px;">
+                  <ion-label style="font-size: 15px">
+                      Ads Enquiry
+                  </ion-label>
+              </ion-col>
+           
+          </ion-row> -->
+          <ion-item lines="full">
+          <ion-row style="height: 39px;">
+              <ion-col style="margin-left: 18px;">
+                  <ion-icon name="power" style="zoom: 2" ></ion-icon>
+              </ion-col>
+              <ion-col style="margin-top: 5px;margin-left: 6px;">
+                  <ion-label style="font-size: 15px">
+                      Logout
+                  </ion-label>
+              </ion-col>
+            
+          </ion-row>
+        </ion-item>
+        </ion-content>
+      </ion-menu>
+  <ion-router-outlet id="content1"></ion-router-outlet>
+  </ion-app>

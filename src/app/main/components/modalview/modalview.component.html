@@ -1,0 +1,36 @@
+<ion-content>
+  
+  <ion-card class="container">
+    <div>
+      <ion-label class="toolbar">
+        प्रदर्शन चौकशी 
+        <ion-icon name="map" slot="end" 
+         style="color:white;"></ion-icon>
+        </ion-label>
+      </div>
+    <!-- <ion-icon name="list-box" slot="start"></ion-icon> -->
+    <ion-card-header>
+      <ion-card-title>
+        ग्राहक आयडी : TP12345</ion-card-title>
+      <ion-card-subtitle> क्लायंट नाव : श्री सोनवणे सर</ion-card-subtitle>
+      <ion-card-subtitle>प्रस्थान तारीख : 2020-08-12</ion-card-subtitle>
+      <ion-card-subtitle>प्रवासी संख्या : 2</ion-card-subtitle>
+      <ion-card-subtitle>संकलन स्थान: नाशिक</ion-card-subtitle>
+      <ion-card-subtitle>ड्रॉप स्थान: पुणे</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-button color="primary" expand="block" shape="round"
+   (click)="navigate2res()">स्वीकारा</ion-button>
+
+    <ion-button color="danger" expand="block" shape="round"
+    (click)="navigate1res()">नाकारणे</ion-button>
+    
+    <div>
+      <ion-label class="toolbar1">
+        VERIFY
+       
+        </ion-label>
+      </div>
+
+</ion-card>  
+</ion-content>

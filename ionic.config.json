@@ -1,0 +1,8 @@
+{
+  "name": "GmCabs",
+  "integrations": {
+    "capacitor": {},
+    "cordova": {}
+  },
+  "type": "angular"
+}

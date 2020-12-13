@@ -1,0 +1,214 @@
+
+ <ion-header no-border>
+  <ion-navbar>
+    <ion-row>
+      <ion-col col-10>
+        <img class="bg-header animated fadeIn" src="assets/imgs/bg-header.png" alt="">
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-2>
+        <ion-segment [(ngModel)]="segment" color="white">
+            <ion-segment-button value="home">
+              <ion-icon name="home" color="danger"></ion-icon>
+            </ion-segment-button>
+            <ion-segment-button value="view">
+                <ion-icon name="eye"></ion-icon>
+            </ion-segment-button>
+            <ion-segment-button value="add">
+              <ion-icon name="bookmarks-outline" color="warning"></ion-icon>            </ion-segment-button>
+          </ion-segment>
+    </ion-col>
+    </ion-row>
+  </ion-navbar>
+
+  <ion-toolbar padding>
+    
+      <div [ngSwitch]="segment">
+          <ion-list *ngSwitchCase="'home'">
+  
+            <ion-card class="animated pulse">
+              <ion-grid>
+                <ion-row>
+                  <ion-col col-2>
+                    <ion-card-content color="danger">
+                      <!-- <div class="image"> -->
+                      
+                      <ion-icon name="car"  style="font-size: 30px; padding-right: 40px; border-right: 3px solid;"></ion-icon>
+                    <!-- </div> -->
+                    </ion-card-content>
+                  </ion-col>
+                  <ion-col col-10>
+                    <!-- <ion-card-content> -->
+                      <p class="gray">
+                      Client's Number :7588303888  
+                      Shared Ride From Malegaon to Nashik
+                    </p>
+                    <!-- </ion-card- content> -->
+                  </ion-col>
+                </ion-row>
+              </ion-grid>
+            </ion-card>
+  
+          </ion-list>
+        
+          <ion-list *ngSwitchCase="'view'">
+            
+              <ion-card class="animated pulse">
+                  <ion-grid>
+                    <ion-row>
+                      <ion-col col-2>
+                        <ion-card-content color="danger">
+                          <ion-icon name="car" style="font-size: 30px; padding-right: 40px; border-right: 3px solid;"></ion-icon>
+                        </ion-card-content>
+                      </ion-col>
+                      <ion-col col-10>
+                        <ion-card-content>
+                          <p class="gray">
+                          <b>Shared Ride Config: MH 15 AD 8756 
+
+                          </b> 
+                        </p>
+                        </ion-card-content>
+                      </ion-col>
+                    </ion-row>
+                  </ion-grid>
+                </ion-card>
+            
+          </ion-list>
+  
+          <ion-list *ngSwitchCase="'add'">
+  
+              <ion-card class="animated pulse">
+                  <ion-grid>
+                    <ion-row>
+                      <ion-col col-4>
+                        <ion-card-content color="danger">
+                          <ion-icon name="map" style="font-size: 30px; padding-right: 40px; border-right: 3px solid;"></ion-icon>
+                        </ion-card-content>
+                      </ion-col>
+                      <ion-col col-8>
+                        <ion-card-content>
+                          <p class="gray">
+                          <b>Ride Complete</b>
+                        </p>
+                        </ion-card-content>
+                      </ion-col>
+                    </ion-row>
+                  </ion-grid>
+                </ion-card>
+              
+          </ion-list>
+        </div>
+    
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content padding>
+    <div [ngSwitch]="segment">
+      <div *ngSwitchCase="'home'" class="animated fadeIn">
+
+        <ion-item>
+          <!-- <ion-label stacked>Enter Your Name</ion-label> -->
+          <!-- <ion-input [(ngModel)]="nameInput"></ion-input> -->
+        </ion-item>
+<!-- 
+        <div padding>
+          <ion-button margin-left outline (click)="name=nameInput">
+              Enter
+          </ion-button>
+        </div> -->
+
+    </div>
+    <div *ngSwitchCase="'view'" class="animated fadeIn">
+
+        <ion-card>
+          <div class="cut" (click)="view()">
+              <img src="../../../../assets/200.webp" style="width:700px;height: 150px;" >
+          </div>
+            <div padding-bottom padding-left padding-right>
+            <ion-card-content>
+              <ion-fab vertical="top" horizontal="end" slot="fixed">
+                <ion-fab-button (click)="openCar()" #car>
+                  <div class="car-length">{{carItemCount | async}}</div>
+                  <ion-icon name="car-sport" class="car-icon"></ion-icon>
+                </ion-fab-button>
+              </ion-fab>
+              <ion-list>
+                <ion-card *ngFor="let p of products">
+                  <ion-card-header>
+                    <ion-card-title>
+                     Client Name: {{p.name}}
+                    </ion-card-title>
+                  </ion-card-header>
+                  <ion-card-content>
+                    <ion-row class="ion-align-items-center">
+                      <ion-col size="8">
+                        <ion-label color="secondary">
+                          <b>{{p.price | currency:'USD'}}</b>
+                        </ion-label>
+                      </ion-col>
+                       <ion-col size="4" class="ion-text-right">
+                         <ion-button fill="clear" (click)="addToCar(p)">
+                           <ion-icon name="add"></ion-icon>
+                         </ion-button>
+                       </ion-col>
+                    </ion-row>
+                  </ion-card-content>
+                </ion-card> 
+              </ion-list>
+            </ion-card-content>
+            <ion-row>
+              <ion-col>
+                <ion-button icon-start clear small (click)="editor()">
+                  <ion-icon name="options"></ion-icon>
+                  <div>Confirm</div>
+                </ion-button>
+              </ion-col>
+              <!-- <ion-col>
+                <button ion-button icon-start clear small color="danger" (click)="delete()">
+                  <ion-icon name="trash"></ion-icon>
+                  <div>Delete</div>
+                </button>
+              </ion-col> -->
+            </ion-row>
+          </div>
+        </ion-card>
+
+    </div>
+    <div *ngSwitchCase="'add'" class="animated fadeIn">
+
+        <ion-list>
+            <ion-item>
+              <ion-label stacked>Name</ion-label>
+              <ion-input [(ngModel)]="product.name"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label stacked>Estimated Total =$1990</ion-label>
+              <ion-input type="number" [(ngModel)]="product.price"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label floating>Gross Earning : $2000 </ion-label>
+                <ion-select [(ngModel)]="product.currency">
+                      <ion-option value="OMR">OMR</ion-option>
+                      <ion-option value="USD">USD</ion-option>
+                  </ion-select>
+              </ion-item>
+            <div text-center margin-top padding>
+              <ion-button *ngIf="!product.id"  margin-right (click)="add()" block>
+                Ride Complete
+              </ion-button>
+              <!-- <ion-button *ngIf="product.id" ion-button margin-right (click)="edit()" block>
+                Save
+              </ion-button> -->
+            </div>
+          </ion-list>
+
+    </div>
+  </div>
+</ion-content>
+
+
+
+

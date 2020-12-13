@@ -1,0 +1,324 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+        <ion-menu-button ></ion-menu-button>
+      </ion-buttons>
+      <ion-title class="ion-text-center" style="margin-right: 2.0rem;" color="danger" >
+        <b>DashBoard</b>
+        </ion-title>
+<!-- 
+        <ion-buttons style="margin-right: 10px;" slot="end">
+          <ion-icon name="chatbubbles"></ion-icon>
+        </ion-buttons> -->
+         <ion-buttons slot="end">
+          <ion-icon name="chatbubbles-outline" size="large"></ion-icon>         
+           <ion-badge>3</ion-badge> 
+          <ion-select style="position: absolute !important;margin-left: 20px;" interface="popover">
+            <ion-select-option value="nes">Toggle</ion-select-option>
+            <ion-select-option value="n64">Messages</ion-select-option>
+            <ion-select-option value="ps">Ride Completed [Sarah]</ion-select-option>
+            <!-- <ion-select-option value="genesis">Sega Genesis</ion-select-option>
+            <ion-select-option value="saturn">Sega Saturn</ion-select-option>
+            <ion-select-option value="snes">SNES</ion-select-option> -->
+          </ion-select>     
+          </ion-buttons>
+        <!-- <div class="ion-text-center" style="color:#f04141;font-size: 12px;margin-top: 5px;margin-right:10px ;">
+         <span>
+           <b>
+        < &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Monday,&nbsp; Nov 25th &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; >
+      </b>
+          </span> 
+         </div> -->
+</ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+
+  <ion-card >
+    <ion-card-header style="background-color: lightgrey;">
+      <ion-card-title style="font-size: medium;" color="success" class="ion-text-center">Welcome to Gm Cabs<a href="">Enter Vehicle Details</a></ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+
+      <!-- <h5><b>Monday, November 25th</b></h5> -->
+      <ion-grid class="ion-no-padding">
+        <ion-row class="ion-margin-top">
+          <ion-col class="ion-no-padding" size="3">
+            <ion-card-title>
+              <ion-chip>
+              <ion-avatar style="text-align: left;">
+                <ion-icon name="car-sport-outline" size="large"></ion-icon>
+              </ion-avatar>
+              <ion-label> <ion-col>
+                <span>  &nbsp;&nbsp;  Sedan</span>
+              </ion-col></ion-label>
+            </ion-chip>
+            </ion-card-title>
+          </ion-col>
+          <ion-col style="margin-left: 1.5rem;margin-top: 1rem;" >
+            <span color="danger"><b>Hyundai Aura 22 Rs/Km</b> </span>
+          </ion-col>
+          <!-- <ion-col class="ion-align-self-center" size="3">
+            <span class="ion-float-right">22 Rs/ km</span>
+          </ion-col> -->
+        </ion-row>
+        <ion-row>
+          <ion-col size="12">
+            <span>Special Requests: Chilled Coke</span>
+          </ion-col>
+
+        </ion-row>
+
+      </ion-grid>
+
+    </ion-card-content>
+  </ion-card>
+
+  <!-- <ion-card >
+    <ion-card-header style="background-color: lightblue;">
+      <ion-card-title color="danger" class="ion-text-center">
+        <ion-icon name="browsers-outline" size="large"></ion-icon>
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+
+      <ion-grid class="ion-no-padding">
+        <ion-row class="ion-margin-top">
+         
+          <ion-col class="ion-align-self-center" size="6">
+            <span color="danger"><b>View Enquiry:</b></span>
+
+
+          </ion-col>
+          <ion-col class="ion-align-self-center" size="3">
+            <span class="ion-float-right"><b>1</b></span>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col class="ion-align-self-center" size="6">
+            <span>Special Requests: </span>
+          </ion-col>
+          <ion-col class="ion-align-self-center" size="3">
+            <span class="ion-float-right"><b>2</b></span>
+          </ion-col>
+        </ion-row>
+
+      </ion-grid>
+
+    </ion-card-content>
+  </ion-card> -->
+
+  <!-- <ion-card  [routerLink]="[ '/main/AddVehicles' ]">
+    <ion-card-header style="background-color: lightsalmon;">
+      <ion-card-title color="danger" class="ion-text-center">
+        
+        <ion-icon name="bus-outline" size="large"></ion-icon>
+      
+      
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content [routerLink]="[ '/main/profile' ]">
+
+      <h5><b>Monday, November 25th</b></h5>
+      <ion-grid class="ion-no-padding">
+        <ion-row class="ion-margin-top">
+          <ion-col class="ion-no-padding" size="3">
+            <ion-card-title>
+              <ion-avatar item-start>
+                <img src="../../../../assets/Img/Cuisine4.jpg">
+              </ion-avatar>
+            </ion-card-title>
+          </ion-col>
+          <ion-col class="ion-align-self-center" size="6">
+            <span color="danger">Added Vehicles:    </span>
+
+
+          </ion-col>
+          <ion-col class="ion-align-self-center" size="3">
+            <span class="ion-float-right">2</span>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col class="ion-align-self-center" size="6">
+            <span>Special Requests:</span>
+          </ion-col>
+          <ion-col class="ion-align-self-center" size="3">
+            <span class="ion-float-right">No Requests</span>
+          </ion-col>
+        </ion-row>
+
+      </ion-grid>
+
+    </ion-card-content>
+  </ion-card> -->
+  <!-- <ion-card  [routerLink]="[ '/main/profile' ]">
+    <ion-card-header style="background-color: lightgreen;">
+      <ion-card-title color="danger" class="ion-text-center">
+        
+        <ion-icon name="person-outline" size="large"></ion-icon>
+      
+      
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+
+      <ion-grid class="ion-no-padding">
+        <ion-row class="ion-margin-top">
+        
+          <ion-col class="ion-align-self-center" size="6">
+            <span color="danger">Profile Completeness </span>
+
+
+          </ion-col>
+          <ion-col class="ion-align-self-center" size="3">
+            <span class="ion-float-right">0 %</span>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+         
+        </ion-row>
+
+      </ion-grid>
+
+    </ion-card-content>
+  </ion-card> -->
+<ion-card  [routerLink]="[ '/main/ManageEnquiry' ]">
+  <ion-card-content>
+  <!-- <div class="container"> -->
+    <div class="product-card">
+      <div class="image">
+        <fa-icon [icon]="faEnvelope" style="zoom: 2.5;margin-left: 1rem!important;" ></fa-icon>
+        <!-- <img src="../../../../assets/message picture.png" style="width: 640px;height: 960px;" alt=""> -->
+      </div>
+      <div class="card-content">
+        <span style="color: lightseagreen;"><b>Enquiries</b></span>
+        <p><span><b>0</b></span></p>
+        <div class="store-purchase">
+          <!-- <div class="price">$149.99</div> -->
+          <!-- <div class="buy">
+            <button>Buy Now</button>
+          </div> -->
+        </div>
+      </div>
+    </div>
+  <!-- </div>  -->
+</ion-card-content>
+</ion-card>
+<ion-card [routerLink]="[ '/main/profile' ]">
+  <ion-card-content>
+  <!-- <div class="container"> -->
+    <div class="product-card">
+      <div class="image2">
+        <fa-icon [icon]="faCar" style="zoom: 2.5;margin-left: 1rem!important;" ></fa-icon>
+      </div>
+      <div class="card-content">
+        <span style="color: lightseagreen;"><b>Add Vehicles</b></span>
+        <p><span><b>2</b></span></p>
+        <div class="store-purchase">
+          <!-- <div class="price">$149.99</div> -->
+          <!-- <div class="buy">
+            <button>Buy Now</button>
+          </div> -->
+        </div>
+      </div>
+    </div>
+  <!-- </div> -->
+</ion-card-content>
+</ion-card>
+<ion-card [routerLink]="[ '/main/profile' ]">
+  <ion-card-content>
+  <!-- <div class="container"> -->
+    <div class="product-card">
+      <div class="image3">
+        <fa-icon [icon]="faUser" style="zoom: 2.5;margin-left: 1rem!important;" ></fa-icon>
+      </div>
+      <div class="card-content">
+        <span style="color: lightseagreen;"><b>Profile Completeness</b></span>
+        <p><span><b>20%</b></span></p>
+        <div class="store-purchase">
+          <!-- <div class="price">$149.99</div> -->
+          <!-- <div class="buy">
+            <button>Buy Now</button>
+          </div> -->
+        </div>
+      </div>
+    </div>
+  <!-- </div> -->
+</ion-card-content>
+</ion-card>
+<ion-card  [routerLink]="[ '/main/profile' ]">
+  <ion-card-content>
+  <!-- <div class="container"> -->
+    <div class="product-card">
+      <div class="image4">
+        <fa-icon [icon]="faIdCard" style="zoom: 2.5;margin-left: 1rem!important;" ></fa-icon>
+      </div>
+      <div class="card-content">
+        <span style="color: lightseagreen;"><b>Add Driver</b></span>
+        <p><span><b>Fill Form</b></span></p>
+        <div class="store-purchase">
+          <!-- <div class="price">$149.99</div> -->
+          <!-- <div class="buy">
+            <button>Buy Now</button>
+          </div> -->
+        </div>
+      </div>
+    </div>
+  <!-- </div> -->
+</ion-card-content>
+</ion-card>
+<ion-card color="dark" [routerLink]="[ '/main/profile' ]">
+  <ion-card-content>
+  <ion-item>
+    <h3>New Booking<span class="badge badge-secondary">New</span></h3>
+  </ion-item>
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">New Customer</th>
+          <th scope="col">Client</th>
+          <th scope="col">Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">GM9842</th>
+          <td>Mark</td>
+          <td>Full</td>
+        </tr>
+        <tr>
+          <th scope="row">GM1848</th>
+          <td>Jacob</td>
+          <td>Yash</td>
+        </tr>
+        <tr>
+          <th scope="row">GM4588</th>
+          <td>Larry</td>
+          <td>PAge</td>
+        </tr>
+      </tbody>
+    </table>
+    
+</ion-card-content>
+</ion-card>
+</ion-content>
+
+<!-- <ion-footer>
+  <ion-toolbar>
+    <ion-tabs>
+      <ion-tab-bar slot="bottom">
+        <ion-tab-button [routerLink]="[ '/main/dashboard-menu' ]">
+          <ion-icon name="pizza"></ion-icon>
+          <ion-label>Menu</ion-label>
+        </ion-tab-button>
+        <ion-tab-button>
+          <ion-icon color="danger" name="list-box"></ion-icon>
+          <ion-label color="danger">Orders</ion-label>
+        </ion-tab-button>
+        <ion-tab-button (click)="logoutMsg()">
+          <ion-icon name="person"></ion-icon>
+          <ion-label>Account</ion-label>
+        </ion-tab-button>
+      </ion-tab-bar>
+    </ion-tabs>
+  </ion-toolbar>
+</ion-footer> -->

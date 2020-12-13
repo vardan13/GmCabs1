@@ -1,0 +1,113 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+        <ion-menu-button ></ion-menu-button>
+      </ion-buttons>
+      <ion-title class="ion-text-center" style="margin-right: 2.5rem;" color="danger" >
+        <b>Edit Profile</b>
+      </ion-title>
+      
+</ion-toolbar>
+
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <div style="text-align: center;">
+      <ion-card>
+      <img src="../../../../assets/504-5040528_empty-profile-picture-png-transparent-png.png"
+     
+      alt="">
+    </ion-card>
+  </div>
+    </ion-card-header>
+    
+    <ion-card-content>
+      <div style="text-align: center;">
+      <ion-card-title>
+        <b>Vardan Hingmire</b>
+        <p>
+          GMCabs Team
+        </p>
+        </ion-card-title>
+      </div>
+      
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+
+    <ion-card-content>
+      <ion-tabs>
+        <ion-tab-bar slot="bottom">
+          <ion-tab-button tab="schedule">
+            <ion-icon name="calendar" (click)="navigatetoprofile()"></ion-icon>
+            <ion-label (click)="navigatetoprofile()">Edit Profile</ion-label>
+            <!-- <ion-badge></ion-badge> -->
+          </ion-tab-button>
+      
+          <ion-tab-button tab="speakers"  >
+            <ion-icon name="briefcase" (click)="navigatetobankDetails()"></ion-icon>
+            <ion-label (click)="navigatetobankDetails()">Bank Details</ion-label>
+            <ion-badge>2</ion-badge>
+          </ion-tab-button>
+      
+          <ion-tab-button tab="map">
+            <ion-icon name="map"></ion-icon>
+            <ion-label>Support</ion-label>
+          </ion-tab-button>
+      
+        </ion-tab-bar>
+      </ion-tabs>
+      <ion-list >
+
+        <ion-item>
+          <ion-label position="floating">Account Holder Name</ion-label>
+          <ion-input></ion-input>
+        </ion-item>
+    
+        <ion-item>
+          <ion-label position="floating">Account Number</ion-label>
+          <ion-input></ion-input>
+        </ion-item>
+    
+        <ion-item>
+          <ion-label position="floating">IFSC Code</ion-label>
+          <ion-input></ion-input>
+        </ion-item>
+    
+        <ion-item>
+          <ion-label>Select UPI</ion-label>
+          <ion-select value="none">
+            <ion-select-option value="PhonePay">PhonePay</ion-select-option>
+            <ion-select-option value="GooglePay">GooglePay</ion-select-option>
+            <ion-select-option value="AmazonPay">AmazonPay </ion-select-option>
+            <ion-select-option value="Paypal">Other</ion-select-option>
+
+          </ion-select>
+        </ion-item>
+    
+        <ion-item>
+          <ion-label position="floating">UPI ID/Mobile Number</ion-label>
+          <ion-input></ion-input>
+        </ion-item>
+        
+      </ion-list>
+    
+    </ion-card-content>
+  </ion-card>
+  <!-- <ion-card> -->
+    <!-- <ion-card-content> -->
+      <ion-grid>
+        <ion-row>
+          <ion-col col-3>
+            <ion-button color="danger" (click)="navigate()" >
+             Save Changes
+            </ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    <!-- </ion-card-content> -->
+  <!-- </ion-card> -->
+
+</ion-content>

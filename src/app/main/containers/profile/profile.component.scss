@@ -1,0 +1,48 @@
+
+
+
+ion-content {
+    background-image: url(../../../../assets/taxi-app-development-banner.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 100%;
+    width: 100%;
+ 
+}
+
+ion-toolbar {
+    background: transparent;
+}
+
+.align{
+    width: 80%;
+    margin: auto;
+   }
+
+
+.card {
+    margin: 0 auto;
+
+    .header {
+        height: 1px;
+
+        .avatar {
+            width: 150px;
+            height: 150px;
+            position: relative;
+            margin: 0 auto;
+
+            img {
+                display: block;
+                border-radius: 50%;
+                position: absolute;
+                bottom: calc(-1*(80px + 4px));
+                border: 8px solid #9Dc912;
+                background-color: #fff;
+                margin-bottom: 97px;
+            }
+        }
+    }
+}

@@ -1,0 +1,121 @@
+
+
+<ion-content class="ion-padding">
+    <form id="login-form" class="form" action="" method="post" novalidate [formGroup]="registrationForm" (ngSubmit)="submit()" >
+      <div padding>
+    <ion-row>
+      <ion-col class="ion-text-center">
+        <img class="logo" src="../../../../assets/GM-Cab_Final-Logo.png" height="100px" width="100px" />
+      </ion-col>
+    </ion-row>
+    <ion-row style="margin-top: -35px;">
+        <ion-col class="ion-text-center">
+          <h3><b>Gm Cabs</b></h3>
+  </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="ion-text-center">
+        <!-- <ion-list > -->
+        <ion-card>
+          <ion-item>
+  
+            <ion-input type="text" formControlName="name" placeholder="नाव"></ion-input>
+  
+          </ion-item>
+        </ion-card>
+        <div *ngFor="let error of errorMessages.name">
+          <ng-container *ngIf="name.hasError(error.type) && (name.dirty || name.touched)">
+            <small class="error-message">{{error.message}}</small>
+          </ng-container>
+        </div>
+        <ion-card>
+          <ion-item>
+  
+            <ion-input type="text" formControlName="lname" placeholder="आडनाव"></ion-input>
+  
+          </ion-item>
+        </ion-card>
+        <div *ngFor="let error of errorMessages.lname">
+          <ng-container *ngIf="lname.hasError(error.type) && (lname.dirty || lname.touched)">
+            <small class="error-message">{{error.message}}</small>
+          </ng-container>
+        </div>
+        <ion-card>
+          <ion-item>
+  
+            <ion-input type="email" formControlName="email" placeholder="ईमेल" ></ion-input>
+  
+          </ion-item>
+        </ion-card>
+         <div *ngFor="let error of errorMessages.email">
+           <ng-container *ngIf="email.hasError(error.type) && (email.dirty || email.touched )">
+             <small class="error-message">{{error.message}}</small>
+           </ng-container>
+         </div>
+        <ion-card>
+          <ion-item>
+  
+            <ion-input type="Number" formControlName="phone" placeholder="मोबाइल नंबर"></ion-input>
+  
+          </ion-item>
+        </ion-card>
+        <div *ngFor="let error of errorMessages.phone">
+          <ng-container *ngIf="phone.hasError(error.type) && (phone.dirty || phone.touched)">
+            <small class="error-message">{{error.message}}</small>
+          </ng-container>
+        </div>
+        <!-- <ion-card>
+          <ion-item>
+  
+            <ion-input type="OTP" formControlName="Otp" placeholder="ओटीपी प्रविष्ट करा" ></ion-input>
+  
+          </ion-item>
+        </ion-card> -->
+        <!-- <div *ngFor="let error of errorMessages.Otp">
+          <ng-container *ngIf="Otp.hasError(error.type) && (Otp.dirty || Otp.touched)">
+            <small class="error-message">{{error.message}}</small>
+          </ng-container>
+        </div> -->
+
+        <!-- <ion-card>
+          <ion-item>
+  
+            <ion-input type="email" placeholder="Mobile Number" ></ion-input>
+  
+          </ion-item>
+        </ion-card> -->
+  
+        <!-- <ion-card>
+            <ion-item>
+    
+              <ion-input type="Number" placeholder="Enter OTP" ></ion-input>
+    
+            </ion-item>
+          </ion-card> -->
+        <!-- </ion-list> -->
+      </ion-col>
+    </ion-row>
+    <ion-grid>
+      <ion-row>
+  
+        <!-- <ion-col col-3>
+    
+          <ion-button color="primary" expand="block" [routerLink]="[ '/main/info' ]">
+            Sign In
+          </ion-button>
+        </ion-col> -->
+        <ion-col col-8>
+    
+          <ion-button type="submit" color="danger" expand="block" >
+           Sign Up
+           <ion-icon slot="end" name="create"></ion-icon>
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  
+  
+   
+    </div>
+    </form>
+  </ion-content>

@@ -1,0 +1,85 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "~@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+@import '~@ionic/angular/css/display.css';
+
+/* Optional CSS utils that can be commented out */
+@import "~@ionic/angular/css/padding.css";
+@import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/text-alignment.css";
+@import "~@ionic/angular/css/text-transformation.css";
+@import "~@ionic/angular/css/flex-utils.css";
+@import '~animate.css/animate.min.css';
+
+.car-modal{
+   --height:50%;
+   --border-radius:10px;
+   padding:25px;
+}
+
+shared-modal {
+   /* modals are hidden by default */
+   display: none;
+   .shared-modal {
+     /* modal container fixed across whole screen */
+     position: fixed;
+     top: 0;
+     right: 0;
+     bottom: 0;
+     left: 0;
+     /* z-index must be higher than .jw-modal-background */
+     z-index: 9989;
+     /* enables scrolling for tall modals */
+     overflow: auto;
+     background-color: #00000073;
+     .shared-modal__body {
+       max-width: 750px;
+       margin-left: auto;
+       margin-right: auto;
+       padding: 15px;
+       padding-bottom: 10px;
+       background: #fff;
+       /* margin exposes part of the modal background */
+       margin-top: 90px;
+       margin-bottom: 90px;
+       z-index: 9999;
+     }
+   }
+   .shared-modal__background {
+     /* modal background fixed across whole screen */
+     position: fixed;
+     top: 0;
+     right: 0;
+     bottom: 0;
+     left: 0;
+     /* semi-transparent black  */
+     // background-color: #000;
+     opacity: 0.6;
+     /* z-index must be below .jw-modal and above everything else  */
+     z-index: 998;
+   }
+   .modal-footer {
+     padding: 0;
+     padding-top: 5px;
+   }
+ }
+ 
+ body.shared-modal--open {
+   /* body overflow is hidden to hide main scrollbar when modal window is open */
+   overflow: hidden;
+ }

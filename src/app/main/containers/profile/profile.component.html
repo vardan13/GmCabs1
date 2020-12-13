@@ -1,0 +1,171 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+        <ion-menu-button ></ion-menu-button>
+      </ion-buttons>
+      <ion-title class="ion-text-center" style="margin-right: 2.5rem;" color="danger" >
+        <b>Edit Profile</b>
+      </ion-title>
+      
+</ion-toolbar>
+
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <div style="text-align: center;">
+      <ion-card>
+      <img src="../../../../assets/504-5040528_empty-profile-picture-png-transparent-png.png"
+        
+      alt=""  style="width: 240px;height: 300px;"> 
+    </ion-card>
+  </div>
+    </ion-card-header>
+    
+    <ion-card-content>
+      <div style="text-align: center;">
+      <ion-card-title>
+        <b>Vardan Hingmire</b>
+        <p>
+          GMCabs Team
+        </p>
+        </ion-card-title>
+      </div>
+      
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-content>
+      <ion-list lines="none" class="mb-2">
+        <ion-item lines="none" >
+          <ng-container>
+          <!-- <div > -->
+      <ion-tabs >
+        <ion-tab-bar slot="bottom">
+          <ion-tab-button tab="schedule" class="ml-4">
+            <ion-icon name="calendar" size="large"></ion-icon>
+            <ion-title style="font-size: smaller;" >Profile</ion-title>
+            <ion-badge>1</ion-badge>
+          </ion-tab-button>
+      
+          <ion-tab-button tab="speakers" >
+            <ion-icon name="briefcase" size="large" (click)="navigatetobankDetails()"></ion-icon>
+            <ion-title style="font-size: smaller;" (click)="navigatetobankDetails()" >Bank Details</ion-title>
+          </ion-tab-button>
+      
+          <ion-tab-button tab="map" class="mr-4" >
+            <ion-icon name="map" size="large" (click)="navigatetosupport()"></ion-icon>
+            <ion-title style="font-size: smaller;" (click)="navigatetosupport()">Chat With Support</ion-title>
+          </ion-tab-button>
+      
+        </ion-tab-bar>
+      </ion-tabs>
+    <!-- </div> -->
+    </ng-container>
+        </ion-item>
+    </ion-list>
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+
+    <ion-card-content>
+     
+      <ion-list >
+
+        <ion-item>
+          <ion-label position="floating">FirstName</ion-label>
+          <ion-input></ion-input>
+        </ion-item>
+    
+        <ion-item>
+          <ion-label position="floating">LastName</ion-label>
+          <ion-input></ion-input>
+        </ion-item>
+    
+        <ion-item>
+          <ion-label position="floating">Email Id</ion-label>
+          <ion-input></ion-input>
+        </ion-item>
+    
+        <ion-item>
+          <ion-label position="floating">Location</ion-label>
+          <ion-input></ion-input>
+        </ion-item>
+    
+        <ion-item>
+          <ion-label position="floating">Mobile No</ion-label>
+          <ion-input></ion-input>
+        </ion-item>
+
+       <h3 *ngIf="images.length === 0" text-center>Please Select Image</h3>
+        <ion-item *ngFor="let img of images;index as pos">
+          <ion-thumbnail slot="start">
+            <ion-img [src]="img.path"></ion-img>
+          </ion-thumbnail>
+
+          <ion-label position="fixed">{{img.name}}</ion-label>
+
+          <ion-button slot="end" fill="clear" (click)="startUpload(img)">
+           <ion-icon slot="icon-only" name="cloud-upload"></ion-icon>
+          </ion-button>
+
+          <ion-button slot="end" fill="clear" (click)="deleteImage(img,pos)">
+            <ion-icon slot="icon-only" name="trash"></ion-icon>
+           </ion-button>
+           
+        </ion-item>
+        <ion-item>
+        <!-- <ion-card> -->
+          <!-- <ion-card-content> -->
+            <!-- <ion-toolbar color="primary"> -->
+              <ion-label position="fixed" >Selfie Image</ion-label>
+              <ion-button color="primary" (click)="selectImage()">
+                  
+                <ion-icon name="camera" slot="start">
+            
+                </ion-icon>
+              </ion-button>
+             <!-- </ion-toolbar> -->
+          <!-- </ion-card-content> -->
+        <!-- </ion-card> -->
+      </ion-item>
+        <ion-item >
+          <ion-label position="fixed">License Document</ion-label>
+            <ion-button (click)="UPloadFiLeDrivingLicense()">Upload File</ion-button>
+          <ion-label><b>{{uploadText}}</b></ion-label> 
+        </ion-item>
+        <ion-item >
+          <ion-label position="fixed">Aadhar Document</ion-label>
+          <ion-button (click)="UPloadFiLeAadhar()">Upload File</ion-button>
+          <ion-label><b>{{uploadText}}</b></ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>License Valid From</ion-label>
+          <ion-datetime displayFormat="MM DD YY" placeholder="Select Date"></ion-datetime>
+        </ion-item>
+        <ion-item>
+          <ion-label>License Valid To</ion-label>
+          <ion-datetime displayFormat="MM DD YY" placeholder="Select Date"></ion-datetime>
+        </ion-item>
+      </ion-list>
+    
+    </ion-card-content>
+  </ion-card>
+
+  
+  <!-- <ion-card> -->
+    <!-- <ion-card-content> -->
+      <ion-grid>
+        <ion-row>
+          <ion-col col-3>
+            <ion-button color="danger" (click)="navigate()" >
+             Save Changes
+            </ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    <!-- </ion-card-content> -->
+  <!-- </ion-card> -->
+
+</ion-content>
